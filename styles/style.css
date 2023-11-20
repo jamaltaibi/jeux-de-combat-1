@@ -1,0 +1,98 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    background-image:url(../img/fond.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.joueur{
+    height: 100vh ;
+    width: 49.5vw;
+    border:0.2rem solid black;
+}
+.haut{
+    height: 69vh;
+}
+.personnage{
+    width: 49vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.Guerrier{
+    background-color:#8A4B25;
+    background-image:url(../img/guerrier\ .png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1rem solid black;
+    height: 25vh;
+    width: 10vw;
+    transition: 1s ease;
+}
+.Guerrier:hover{
+    width: 50%;
+}
+
+.Mage{
+    background-color: #8A4B25;
+    background-image: url(../img/mage.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1rem solid black;
+    height: 25vh;
+    width: 10vw;
+    transition: 1s ease;
+}
+.Mage:hover{
+    width: 50%;
+}
+
+.Pretre{
+    background-color: #8A4B25;
+    background-image: url(../img/pretre.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1rem solid black;
+    height: 25vh;
+    width: 10vw;
+    transition: 1s ease;   
+}
+.Pretre:hover{
+    width: 50%;
+}
+
+.Archer{
+    background-color: #8A4B25;
+    background-image: url(../img/Archer.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1rem solid black;
+    height: 25vh;
+    width: 10vw;
+    transition: 1s ease;
+    
+}
+.Archer:hover{
+    width: 50%;
+}
+
+.nom{
+    font-size:2em;
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    color: wheat;
+}
+.vie{
+    background-color: red;
+    height: 1vh;
+    width: 100%;
+}
