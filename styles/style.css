@@ -8,15 +8,16 @@ body{
     background-size: cover;
 }
 
-.joueur{
+.joueur1,.joueur2{
     height: 100vh ;
-    width: 49.5vw;
+    width: 50vw;
     border:0.2rem solid black;
 }
 .haut{
-    height: 69vh;
+    height: 70vh;
 }
 .personnage{
+    height: 30vh;
     width: 49vw;
     display: flex;
     justify-content: space-between;
@@ -34,9 +35,6 @@ body{
     width: 10vw;
     transition: 1s ease;
 }
-.Guerrier:hover{
-    width: 50%;
-}
 
 .Mage{
     background-color: #8A4B25;
@@ -49,9 +47,6 @@ body{
     width: 10vw;
     transition: 1s ease;
 }
-.Mage:hover{
-    width: 50%;
-}
 
 .Pretre{
     background-color: #8A4B25;
@@ -63,9 +58,6 @@ body{
     height: 25vh;
     width: 10vw;
     transition: 1s ease;   
-}
-.Pretre:hover{
-    width: 50%;
 }
 
 .Archer{
@@ -80,19 +72,36 @@ body{
     transition: 1s ease;
     
 }
-.Archer:hover{
-    width: 50%;
+.Guerrier:hover,.Mage:hover,.Pretre:hover,.Archer:hover{
+    width: 75%; 
+    font-size:200%;
 }
 
 .nom{
-    font-size:2em;
+    font-size:1.5em;
     font-weight: bold;
     position: relative;
-    top: 50%;
+    top: 30%;
     color: wheat;
 }
 .vie{
     background-color: red;
     height: 1vh;
     width: 100%;
+}
+
+.attaque{
+    height: 3vh;
+    display: flex;
+    align-items: center;
+}
+.defense{
+    height: 3vh;
+    display: flex;
+    align-items: center;
+}
+.capspe{
+    height: 3vh;
+    display: flex;
+    align-items: center;
 }
