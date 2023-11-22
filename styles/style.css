@@ -2,22 +2,44 @@ body{
     height: 100vh;
     width: 100vw;
     margin: 0;
-    display: flex;
     background-image:url(../img/fond.png);
     background-position: center;
     background-size: cover;
 }
 
+/* Page d'accueil */
+#commencerlapartie{
+    background-color: wheat;
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+#newgame{
+    background-color:chocolate;
+    font-size: large;
+}
+
+#Arene{
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+}
 .joueur1,.joueur2{
-    height: 100vh ;
+    height: 95vh ;
     width: 50vw;
     border:0.2rem solid black;
 }
-.haut{
+.haut,.haut2{
     height: 70vh;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .personnage{
-    height: 30vh;
+    height: 24vh;
     width: 49vw;
     display: flex;
     justify-content: space-between;
@@ -26,7 +48,7 @@ body{
 
 .Guerrier{
     background-color:#8A4B25;
-    background-image:url(../img/guerrier\ .png);
+    background-image:url(../img/guerrier.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -35,7 +57,6 @@ body{
     width: 10vw;
     transition: 1s ease;
 }
-
 .Mage{
     background-color: #8A4B25;
     background-image: url(../img/mage.png);
@@ -47,7 +68,6 @@ body{
     width: 10vw;
     transition: 1s ease;
 }
-
 .Pretre{
     background-color: #8A4B25;
     background-image: url(../img/pretre.png);
@@ -59,7 +79,6 @@ body{
     width: 10vw;
     transition: 1s ease;   
 }
-
 .Archer{
     background-color: #8A4B25;
     background-image: url(../img/Archer.png);
@@ -72,6 +91,7 @@ body{
     transition: 1s ease;
     
 }
+
 .Guerrier:hover,.Mage:hover,.Pretre:hover,.Archer:hover{
     width: 75%; 
     font-size:200%;
@@ -104,4 +124,40 @@ body{
     height: 3vh;
     display: flex;
     align-items: center;
+}
+
+/* zone de combat */
+#zonedecombat{
+    height: 100vh;
+}
+#ring{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+
+}
+
+#manette{
+    height: 20vh ;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button{
+    height: 5vh;
+    width: 10vw;
+    border-radius: 50%;
+}
+#attaquer{
+    background-color:green;
+    font-size: x-large;
+
+}
+#capacitespe{
+    background-color: red;
+    font-size: x-large;
 }

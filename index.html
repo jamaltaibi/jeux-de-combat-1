@@ -6,111 +6,81 @@
     <title>Jeux de combat au tour par tour</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body class="lieudujeu">
-    <div class="joueur1" >
-        <div class="haut">
-            <H1 class="player">Joueur 1</H1>
-        </div>
-        <div class="personnage">
+<body id ="lieudujeu">
 
-            <div class="Guerrier">
-                <div class="vie">
-                </div>
-                <div class="attaque">
-                    <div class="att">
-                        <img src="img/attaque.png" alt="">
-                    </div>
-                    <div class="att">
-                        <p>25%</p>
-                    </div>
-                </div>
-                <div class="defense">
-                    <div>
-                        <img src="img/défense.png" alt="">
-                    </div>
-                    <div>
-                        <p>10%</p>
-                    </div>
-                </div>
-                <div class="capspe">
-                    <div>
-                        <img src="img/capacité.png" alt="">
-                    </div>
-                    <div>
-                        <p> 30% </p>
-                    </div>
-                </div>
+    <div id ="commencerlapartie"> <button id="newgame" type="button">Commencer la Partie </button> 
+    </div>
 
-                <p class="nom">Galaad</p>
+    <div id ="Arene">
+        <div class="joueur1" >
+            <div class="haut">
+                <H1 class="player1">Joueur 1</H1>
+                <div id ="perso"></div>
             </div>
-
-            <div class="Mage">
-
-                <div class="vie">
-                </div>
-                <div class="attaque">
-                    <div class="">
-                        <img src="img/attaque.png" alt="">
+            <div class="personnage">
+                <div class="Guerrier">
+                    <div class="attaque">
+                        <div class="att"> <img src="img/attaque.png" alt=""> </div>
+                        <div class="att"> <p>25%</p> </div>
                     </div>
-                    <div class="">
-                        <p>20%</p>
+                    <div class="defense">
+                        <div> <img src="img/défense.png" alt=""> </div>
+                        <div> <p>10%</p> </div>
                     </div>
+                    <div class="capspe">
+                        <div> <img src="img/capacité.png" alt=""> </div>
+                        <div> <p> 30% </p> </div>
+                    </div>
+                    <p class="nom">Galaad</p>
                 </div>
-                <div class="defense">
+
+                <div class="Mage">
+                    <div class="attaque">
+                        <div class=""> <img src="img/attaque.png" alt=""> </div>
+                        <div class=""> <p>20%</p> </div>
+                    </div>
+                    <div class="defense">
                     <div>
                         <img src="img/défense.png" alt="">
                     </div>
                     <div>
                         <p>15%</p>
                     </div>
-                </div>
-                <div class="capspe">
+                    </div>
+                    <div class="capspe">
                     <div>
                         <img src="img/capacité.png" alt="">
                     </div>
                     <div>
                         <p>40%</p>
                     </div>
+                    </div>
+                    <p class="nom">Merlin</p>
                 </div>
 
-                <p class="nom">Merlin</p>
-            </div>
+                <div class="Pretre">
+                    <div class="attaque">
+                        <div class=""> <img src="img/attaque.png" alt=""> </div>
+                        <div class=""> <p>10%</p> </div>
+                    </div>
 
-            <div class="Pretre">
+                    <div class="defense">
+                        <div> <img src="img/défense.png" alt=""></div>
+                        <div> <p>10%</p> </div>
+                    </div>
 
-                <div class="vie">
-                </div>
-                <div class="attaque">
-                    <div class="">
-                        <img src="img/attaque.png" alt="">
-                    </div>
-                    <div class="">
-                        <p>10%</p>
-                    </div>
-                </div>
-                <div class="defense">
-                    <div>
-                        <img src="img/défense.png" alt="">
-                    </div>
-                    <div>
-                        <p>10%</p>
-                    </div>
-                </div>
-                <div class="capspe">
+                    <div class="capspe">
                     <div>
                         <img src="img/capacité.png" alt="">
                     </div>
                     <div>
                         <p>50%</p>
                     </div>
+                    </div>
+                    <p class="nom">Frere Tuck</p>
                 </div>
 
-                <p class="nom">Frere Tuck</p>
-            </div>
-            <div class="Archer">
-
-                <div class="vie">
-                </div>
+                <div class="Archer">
                 <div class="attaque">
                     <div class="">
                         <img src="img/attaque.png" alt="">
@@ -135,147 +105,162 @@
                         <p>40%</p>
                     </div>
                 </div>
-
                 <p class="nom">Robin des bois</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="joueur2" >
-        <div class="haut">
-            <H1 class="player">Joueur 2</H1>
-        </div>
-        <div class="personnage">
+        <div class="joueur2" >
+            <div class="haut2">
+                <H1 class="player2">Joueur 2</H1>
+                <div id="perso2"></div>
+            </div>
+            <div class="personnage">
 
-            <div class="Guerrier">
-                <div class="vie">
-                </div>
-                <div class="attaque">
-                    <div class="">
+                <div class="Guerrier">
+                    <div class="attaque">
+                    <div class="att">
                         <img src="img/attaque.png" alt="">
                     </div>
-                    <div class="">
+                    <div class="att">
                         <p>25%</p>
                     </div>
-                </div>
-                <div class="defense">
+                     </div>
+
+                    <div class="defense">
                     <div>
                         <img src="img/défense.png" alt="">
                     </div>
                     <div>
                         <p>10%</p>
                     </div>
-                </div>
-                <div class="capspe">
+                    </div>
+
+                    <div class="capspe">
                     <div>
                         <img src="img/capacité.png" alt="">
                     </div>
                     <div>
                         <p> 30% </p>
                     </div>
+                    </div>
+
+                    <p class="nom">Galaad</p>
                 </div>
 
-                <p class="nom">Galaad</p>
-            </div>
+                <div class="Mage">
 
-            <div class="Mage">
-               
-                <div class="vie">
+                    <div class="attaque">
+                        <div class="">
+                            <img src="img/attaque.png" alt="">
+                         </div>
+                        <div class="">
+                            <p>20%</p>
+                        </div>
+                    </div>
+                    <div class="defense">
+                        <div>
+                            <img src="img/défense.png" alt="">
+                        </div>
+                        <div>
+                            <p>15%</p>
+                        </div>
+                    </div>
+                    <div class="capspe">
+                        <div>
+                            <img src="img/capacité.png" alt="">
+                        </div>
+                        <div>
+                            <p>40%</p>
+                        </div>
+                    </div>
+                    <p class="nom">Merlin</p>
+
                 </div>
-                <div class="attaque">
-                    <div class="">
+
+                <div class="Pretre">
+
+                    <div class="attaque">
+                        <div class="">
                         <img src="img/attaque.png" alt="">
+                        </div>
+                        <div class="">
+                            <p>10%</p>
+                        </div>
                     </div>
-                    <div class="">
-                        <p>20%</p>
+                     <div class="defense">
+                        <div>
+                            <img src="img/défense.png" alt="">
+                        </div>
+                        <div>
+                            <p>10%</p>
+                        </div>
                     </div>
-                </div>
-                <div class="defense">
-                    <div>
-                        <img src="img/défense.png" alt="">
+                    <div class="capspe">
+                        <div>
+                            <img src="img/capacité.png" alt="">
+                        </div>
+                        <div>
+                            <p>50%</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>15%</p>
-                    </div>
-                </div>
-                <div class="capspe">
-                    <div>
-                        <img src="img/capacité.png" alt="">
-                    </div>
-                    <div>
-                        <p>40%</p>
-                    </div>
+                        <p class="nom">Frere Tuck</p>
+
                 </div>
 
-                <p class="nom">Merlin</p>
-            </div>
-
-            <div class="Pretre">
-
-                <div class="vie">
+                <div class="Archer">
+                    <div class="attaque">
+                        <div class="">
+                            <img src="img/attaque.png" alt="">
+                        </div>
+                        <div class="">
+                            <p>15%</p>
+                        </div>
+                    </div>
+                    <div class="defense">
+                        <div>
+                            <img src="img/défense.png" alt="">
+                        </div>
+                        <div>
+                            <p>5%</p>
+                        </div>
+                    </div>
+                     <div class="capspe">
+                        <div>
+                            <img src="img/capacité.png" alt="">
+                        </div>
+                        <div>
+                            <p>40%</p>
+                        </div>
+                    </div>
+                         <p class="nom">Robin des bois</p>
                 </div>
-                <div class="attaque">
-                    <div class="">
-                        <img src="img/attaque.png" alt="">
-                    </div>
-                    <div class="">
-                        <p>10%</p>
-                    </div>
-                </div>
-                <div class="defense">
-                    <div>
-                        <img src="img/défense.png" alt="">
-                    </div>
-                    <div>
-                        <p>10%</p>
-                    </div>
-                </div>
-                <div class="capspe">
-                    <div>
-                        <img src="img/capacité.png" alt="">
-                    </div>
-                    <div>
-                        <p>50%</p>
-                    </div>
-                </div>
-
-                <p class="nom">Frere Tuck</p>
-            </div>
-            <div class="Archer">
-
-                <div class="vie">
-                </div>
-                <div class="attaque">
-                    <div class="">
-                        <img src="img/attaque.png" alt="">
-                    </div>
-                    <div class="">
-                        <p>15%</p>
-                    </div>
-                </div>
-                <div class="defense">
-                    <div>
-                        <img src="img/défense.png" alt="">
-                    </div>
-                    <div>
-                        <p>5%</p>
-                    </div>
-                </div>
-                <div class="capspe">
-                    <div>
-                        <img src="img/capacité.png" alt="">
-                    </div>
-                    <div>
-                        <p>40%</p>
-                    </div>
-                </div>
-
-                <p class="nom">Robin des bois</p>
             </div>
         </div>
     </div>
 
+    <div id = "zonedecombat">
+        <div id="ring">
+            <div id="place1">
+                <div class="vie"></div>
+            </div>
+            <div id="place2">
+                <div class="vie"></div>
+            </div>
+        </div>
 
+        <div id="manette" action="" >
+            <form action="">
+                <button id ="attaquer" type="button"> Attaquer </button>
+                <button id ="capacitespe" type="button"> Capacité spéciale </button>
+            </form>
+            <form action="">
+                <button id ="attaquer" type="button"> Attaquer </button>
+                <button id ="capacitespe" type="button"> Capacité spéciale </button>
+            </form>
+        </div>
+    </div>
+  
     <script src="script/script.js"></script>
 </body>
 </html>
