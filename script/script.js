@@ -1,6 +1,120 @@
-// const J1 = document.querySelector(`.joueur1`)
-// const J2 = document.querySelector(`joueur2`)
-// const select = document.querySelector(`.personnage`)
+const guerriers = document.querySelectorAll('.Guerrier')
+const mages = document.querySelectorAll('.Mage')
+const pretres = document.querySelectorAll('.Pretre')
+const archers = document.querySelectorAll('.Archer')
+
+const newgame = document.getElementById(`newgame`);
+const partie = document.getElementById('commencerlapartie')
+const  arene = document.getElementById(`Arene`);
+const zonedecombat = document.getElementById('zonedecombat')
+
+let joueur1Choisi = false;
+let joueur2Choisi = false;
+
+
+for (const guerrier of guerriers){
+guerrier.addEventListener('click', () => {
+    if (guerrier.id == "1") {
+        const G = document.querySelector('.perso')
+        G.src = "../img/guerrier.png" 
+        const Gf = document.querySelector('.persof1')
+        Gf.src = "../img/guerrier.png"
+
+        joueur1Choisi = true;
+        activerBoutonCommencer(); 
+    }
+    if (guerrier.id == "2") {
+        const G = document.querySelector('.perso2')
+        G.src = "../img/guerrier.png" 
+        const Gf = document.querySelector('.persof2')
+        Gf.src = "../img/guerrier.png" 
+
+        joueur2Choisi = true;
+        activerBoutonCommencer();  
+    } 
+   
+})}
+
+for (const mage of mages){
+mage.addEventListener('click', () => {
+    if (mage.id == "1") {
+        const M = document.querySelector('.perso')
+        M.src = "../img/mage.png" 
+        const Mf = document.querySelector('.persof1')
+        Mf.src = "../img/mage.png" 
+        joueur1Choisi = true;
+        activerBoutonCommencer();  
+    }
+    
+
+    if (mage.id == "2") {
+        const M = document.querySelector('.perso2')
+        M.src = "../img/mage.png" 
+        const Mf = document.querySelector('.persof2')
+        Mf.src = "../img/mage.png"  
+        joueur2Choisi = true;
+        activerBoutonCommencer();  
+    }
+    
+})}
+
+for (const pretre of pretres){
+pretre.addEventListener('click', () => {
+    if (pretre.id == "1") {
+        const P = document.querySelector('.perso')
+        P.src = "../img/pretre.png"
+        const Pf = document.querySelector('.persof1')
+        Pf.src = "../img/pretre.png" 
+        joueur1Choisi = true;
+        activerBoutonCommencer();      
+    }
+    if (pretre.id == "2") {
+        const P = document.querySelector('.perso2')
+        P.src = "../img/pretre.png"
+        const Pf = document.querySelector('.persof2')
+        Pf.src = "../img/pretre.png" 
+        joueur2Choisi = true;
+        activerBoutonCommencer(); 
+    }
+    
+  
+})}
+
+for (const archer of archers){
+archer.addEventListener('click', () => {
+    if (archer.id == "1") {
+        const A = document.querySelector('.perso')
+        A.src = "../img/Archer.png" 
+        const Af = document.querySelector('.persof1')
+        Af.src = "../img/Archer.png" 
+        joueur1Choisi = true;
+        activerBoutonCommencer(); 
+    }
+    if (archer.id == "2") {
+        const A = document.querySelector('.perso2')
+        A.src= "../img/Archer.png"
+        const Af = document.querySelector('.persof2')
+        Af.src = "../img/Archer.png" 
+        joueur2Choisi = true;
+        activerBoutonCommencer(); 
+    }
+})
+}
+
+
+function activerBoutonCommencer() {
+    if (joueur1Choisi && joueur2Choisi) {
+      newgame.removeAttribute('disabled');
+    }
+  }
+
+newgame.addEventListener('click', () => {
+    partie.style.display = 'none';
+    arene.style.display = "none";
+    zonedecombat.style.display = "flex";
+})
+
+
 
 // let persoG = {
 //     "vie" : "100%",
@@ -26,60 +140,3 @@
 //     "point de défense" : "5%",
 //     "capacite speciale" : "40%",
 // }
-
-const imageG = new Image();
-const imageM = new Image();
-const imageP = new Image();
-const imageA = new Image();
-
-imageA.src= 'img/Archer.png'
-imageP.src ='img/pretre.png'
-imageG.src = 'img/guerrier.png';
-imageM.src = 'img/mage.png';
-
-//page d'accueil//
-imageP.onload = function() {
-    const haut = document.getElementById('perso');
-    haut.appendChild(imageP);
-};
-imageM.onload = function() {
-    const haut2 = document.getElementById('perso2');
-    haut2.appendChild(imageM);
-};
-
-
- //zone de combat//
-imageG.onload = function() {
-    const zonedecombat = document.getElementById('place1');
-    zonedecombat.appendChild(imageG);
-};
-imageA.onload = function() {
-    const zonedecombat = document.getElementById('place2');
-    zonedecombat.appendChild(imageA);
-};
-
-
-
-
-
-// function afficherImage() {
-//     imageG.onload = function(){
-//     let imageG = document.getElementById('perso');
-//     haut.appendChild(imageG);
-//     }
-//   }
-// const selectG = document.querySelector('.Guerrier')
-// selectG.addEventListener('click', afficherImage)
-
-// imageG.onload = function () {
-//     const haut = document.getElementById('perso');
-//     haut.appendChild(imageG);
-// };
-
-// imageP.onload = function() {
-//     const body = document.getElementById('lieudujeu');
-//     const  = document.getElementById('commencerlapartie')
-//     document.getElementsByid(commencerlapartie).style.display = none;
-//     document.getElementsByid(Arene).style.display = none;
-//     body.appendChild(imageP);
-// };

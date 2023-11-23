@@ -39,7 +39,7 @@ body{
 }
 
 .personnage{
-    height: 24vh;
+    height: 25vh;
     width: 49vw;
     display: flex;
     justify-content: space-between;
@@ -104,11 +104,6 @@ body{
     top: 30%;
     color: wheat;
 }
-.vie{
-    background-color: red;
-    height: 1vh;
-    width: 100%;
-}
 
 .attaque{
     height: 3vh;
@@ -129,28 +124,28 @@ body{
 /* zone de combat */
 #zonedecombat{
     height: 100vh;
+    width: 100vw;
+    display: flex;
 }
+
 #ring{
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: end;
-
 }
 
-#manette{
-    height: 20vh ;
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 button{
     height: 5vh;
     width: 10vw;
     border-radius: 50%;
+}
+.vie{
+    background-color: red;
+    height: 2vh;
+    width: 100%;
 }
 #attaquer{
     background-color:green;
