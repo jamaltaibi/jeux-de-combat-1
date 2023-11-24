@@ -26,7 +26,7 @@ body{
     display: flex;
 }
 .joueur1,.joueur2{
-    height: 95vh ;
+    height: 94vh ;
     width: 50vw;
     border:0.2rem solid black;
 }
@@ -39,7 +39,7 @@ body{
 }
 
 .personnage{
-    height: 25vh;
+    height: 24vh;
     width: 49vw;
     display: flex;
     justify-content: space-between;
@@ -120,39 +120,73 @@ body{
     display: flex;
     align-items: center;
 }
+#grise{
+    filter: grayscale(100%);
+}
 
 /* zone de combat */
 #zonedecombat{
     height: 100vh;
     width: 100vw;
-    display: flex;
+    display: none;
+    background-image: url(../img/ring3.png);
+    background-position: center ;
+    background-size: cover;
 }
 
 #ring{
-    height: 90vh;
+    height: 98vh;
     width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: end;
 }
+#J1{
+    width: 40vw;
+}
+#J2{
+    width: 40vw;
+}
 
+
+.P1{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+.P2{
+    height: 70vh;
+    display: flex;
+    justify-content: center; 
+}
 
 button{
     height: 5vh;
     width: 10vw;
     border-radius: 50%;
 }
-.vie{
+
+.vie1,.vie2{
     background-color: red;
     height: 2vh;
     width: 100%;
 }
-#attaquer{
-    background-color:green;
-    font-size: x-large;
 
+.manette,.manette2{
+    margin-top: 2vh;
+    display: flex;
+    justify-content: space-around;
 }
-#capacitespe{
-    background-color: red;
+
+#attaquer1,#attaquer2{
+    background-color:blue;
+    font-size: x-large;
+}
+#defense1,#defense2{
+    background-color: red ;
+    font-size: x-large;
+}
+#capacitespe1,#capacitespe2{
+    background-color: green;
     font-size: x-large;
 }
