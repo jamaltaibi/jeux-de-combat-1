@@ -120,9 +120,6 @@ body{
     display: flex;
     align-items: center;
 }
-#grise{
-    filter: grayscale(100%);
-}
 
 /* zone de combat */
 #zonedecombat{
@@ -141,23 +138,14 @@ body{
     justify-content: space-around;
     align-items: end;
 }
-#J1{
+
+#J1,#J2{
     width: 40vw;
 }
-#J2{
-    width: 40vw;
-}
-
-
-.P1{
+.P1,.P2{
     height: 70vh;
     display: flex;
     justify-content: center;
-}
-.P2{
-    height: 70vh;
-    display: flex;
-    justify-content: center; 
 }
 
 button{
@@ -190,18 +178,41 @@ button{
     background-color: green;
     font-size: x-large;
 }
+#grise{
+    filter: grayscale(100%);
+}
+
+ /* Fin de Partie ! */
 .gameOver{
     height: 100vh;
     width: 100vw;
-    display: none;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     font-size: xx-large;
     color: black;
 }
+.findePartie{
+    font-style: oblique;
+    font-size: 10vh;
+    color: black;
+    text-shadow: 5px 16px 2px rgba(206,89,55,0.83);
+}
 .replay{
-    height: 5vh;
+    height: 10vh;
     width: 10vw;
-    font-size: 3vh;
+    border: 20px inset #9c6625;
+    font-size: 2vh;
+    background-color:wheat;
     border-radius: 50%;
+}
+.winnerIs{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    font-size:5vh;
+    font-style:italic;
+    font-weight:bolder;
+    color:black;
 }
