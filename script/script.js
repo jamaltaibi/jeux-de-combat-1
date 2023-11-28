@@ -9,6 +9,7 @@ newgame.addEventListener('click', () => {
     partie.style.display = 'none';
     arene.style.display = "none";
     zonedecombat.style.display = "flex";
+
 })
 function activerBoutonCommencer() {
     if (joueur1Choisi && joueur2Choisi) {
@@ -21,6 +22,8 @@ const guerriers = document.querySelectorAll('.Guerrier')
 const mages = document.querySelectorAll('.Mage')
 const pretres = document.querySelectorAll('.Pretre')
 const archers = document.querySelectorAll('.Archer')
+const nomJ1 = document.querySelector('.nomJ1')
+const nomJ2 = document.querySelector('.nomJ2')
 
 let joueur1Choisi = false;
 let joueur2Choisi = false;
@@ -29,16 +32,16 @@ let choixJ1 ;
 let choixJ2 ;
 
 let perso = { 
-    'persoG' : { "vie" : "100","pointdattaque" : "25","pointdedéfense" : "10","capacitespeciale" : "15",},
-    'persoM' : { "vie" : "100","pointdattaque" : "20","pointdedéfense" : "10","capacitespeciale" : "20",},
-    'persoP' : { "vie" : "100","pointdattaque" : "15","pointdedéfense" : "10","capacitespeciale" : "30",},
-    'persoA' : { "vie" : "100","pointdattaque" : "20","pointdedéfense" : "5","capacitespeciale" : "30",},
+    'persoG' : { "nom": "Galaad","vie" : 100,"pointdattaque" : 25,"pointdedéfense" : 10,"capacitespeciale" : 15,},
+    'persoM' : { "nom": "Merlin","vie" : 100,"pointdattaque" : 20,"pointdedéfense" : 10,"capacitespeciale" : 20,},
+    'persoP' : { "nom": "Frere Tuck","vie" : 100,"pointdattaque" : 15,"pointdedéfense" : 10,"capacitespeciale" : 30,},
+    'persoA' : { "nom": "Robin des Bois","vie" : 100,"pointdattaque" : 20,"pointdedéfense" : 5,"capacitespeciale" : 30,},
 }
 let perso2 = { 
-    'persoG' : { "vie" : "100","pointdattaque" : "25","pointdedéfense" : "10","capacitespeciale" : "15",},
-    'persoM': { "vie" : "100","pointdattaque" : "20","pointdedéfense" : "10","capacitespeciale" : "20",},
-    'persoP': { "vie" : "100","pointdattaque" : "15","pointdedéfense" : "10","capacitespeciale" : "30",},
-    'persoA': { "vie" : "100","pointdattaque" : "20","pointdedéfense" : "5","capacitespeciale" : "30",},
+    'persoG' : { "nom": "Galaad","vie" : 100,"pointdattaque" : 25,"pointdedéfense" : 10,"capacitespeciale" : 15,},
+    'persoM' : { "nom": "Merlin","vie" : 100,"pointdattaque" : 20,"pointdedéfense" : 10,"capacitespeciale" : 20,},
+    'persoP' : { "nom": "Frere Tuck","vie" : 100,"pointdattaque" : 15,"pointdedéfense" : 10,"capacitespeciale" : 30,},
+    'persoA' : { "nom": "Robin des Bois","vie" : 100,"pointdattaque" : 20,"pointdedéfense" : 5,"capacitespeciale" : 30,},
 }
 
 for (const guerrier of guerriers){
@@ -53,7 +56,7 @@ guerrier.addEventListener('click', () => {
         activerBoutonCommencer();
 
         choixJ1 = perso['persoG']
-
+        nomJ1.textContent = choixJ1.nom
     }
     if (guerrier.id == "2") {
         const G = document.querySelector('.perso2')
@@ -64,7 +67,8 @@ guerrier.addEventListener('click', () => {
         joueur2Choisi = true;
         activerBoutonCommencer();
 
-        choixJ2 = perso2['persoG']  
+        choixJ2 = perso2['persoG'] 
+        nomJ2.textContent = choixJ2.nom 
     }  
 })}
 for (const mage of mages){
@@ -78,7 +82,8 @@ mage.addEventListener('click', () => {
         joueur1Choisi = true;
         activerBoutonCommencer(); 
 
-        choixJ1 = perso['persoM'] 
+        choixJ1 = perso['persoM']
+        nomJ1.textContent = choixJ1.nom 
     }
     
     if (mage.id == "2") {
@@ -90,7 +95,8 @@ mage.addEventListener('click', () => {
         joueur2Choisi = true;
         activerBoutonCommencer();
 
-        choixJ2 = perso2['persoM'] 
+        choixJ2 = perso2['persoM']
+        nomJ2.textContent = choixJ2.nom  
     }
     
 })}
@@ -105,7 +111,8 @@ pretre.addEventListener('click', () => {
         joueur1Choisi = true;
         activerBoutonCommencer();
 
-        choixJ1 = perso['persoP']       
+        choixJ1 = perso['persoP']
+        nomJ1.textContent = choixJ1.nom       
     }
     if (pretre.id == "2") {
         const P = document.querySelector('.perso2')
@@ -117,6 +124,7 @@ pretre.addEventListener('click', () => {
         activerBoutonCommencer(); 
 
         choixJ2 = perso2['persoP'] 
+        nomJ2.textContent = choixJ2.nom 
     }
     
   
@@ -132,7 +140,8 @@ archer.addEventListener('click', () => {
         joueur1Choisi = true;
         activerBoutonCommencer();
 
-        choixJ1 = perso['persoA'] 
+        choixJ1 = perso['persoA']
+        nomJ1.textContent = choixJ1.nom 
     }
     if (archer.id == "2") {
         const A = document.querySelector('.perso2')
@@ -143,7 +152,8 @@ archer.addEventListener('click', () => {
         joueur2Choisi = true;
         activerBoutonCommencer(); 
 
-        choixJ2 = perso2['persoA'] 
+        choixJ2 = perso2['persoA']
+        nomJ2.textContent = choixJ2.nom  
     }
 })
 }
@@ -174,11 +184,14 @@ for (const btn of manette1){
             vie2.style.width = '0%'
             zonedecombat.style.display = "none";
             gameover.style.display = "flex"
-            document.querySelector('.winnerIs').innerHTML = "Victoire du Joueur 1"
+            document.querySelector('.winnerIs').innerHTML = "Victoire du Player 1"
         }
       console.log(choixJ2.vie);
+
        manette1[0].disabled = true
+       manette1[1].disabled = true
        manette2[0].disabled = false
+
        
        
        persof1.id = 'grise';
@@ -206,11 +219,13 @@ for (const btn of manette2){
             vie1.style.width = '0%'
             zonedecombat.style.display = "none";
             gameover.style.display = "flex"
-            document.querySelector('.winnerIs').innerHTML = "Victoire du Joueur 2"
+            document.querySelector('.winnerIs').innerHTML = "Victoire du Player 2"
         }
         console.log(choixJ1.vie);
+    
         manette1[0].disabled = false
         manette2[0].disabled = true
+        manette2[1].disabled = true
         
         persof2.id = 'grise';
         persof1.id = '';
